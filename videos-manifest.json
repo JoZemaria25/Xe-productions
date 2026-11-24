@@ -1,0 +1,74 @@
+{
+  "videos": [
+    {
+      "filename": "01-brand-film-runway.mp4",
+      "src": "./Videos/01-brand-film-runway.mp4",
+      "bytes": 14456717
+    },
+    {
+      "filename": "02-product-cryo-lab-a.mp4",
+      "src": "./Videos/02-product-cryo-lab-a.mp4",
+      "bytes": 1048331
+    },
+    {
+      "filename": "03-product-cryo-lab-b.mp4",
+      "src": "./Videos/03-product-cryo-lab-b.mp4",
+      "bytes": 1047906
+    },
+    {
+      "filename": "04-podcast-host-a.mp4",
+      "src": "./Videos/04-podcast-host-a.mp4",
+      "bytes": 1087932
+    },
+    {
+      "filename": "05-podcast-host-b.mp4",
+      "src": "./Videos/05-podcast-host-b.mp4",
+      "bytes": 1099356
+    },
+    {
+      "filename": "06-podcast-host-c.mp4",
+      "src": "./Videos/06-podcast-host-c.mp4",
+      "bytes": 1097947
+    },
+    {
+      "filename": "07-podcast-host-d.mp4",
+      "src": "./Videos/07-podcast-host-d.mp4",
+      "bytes": 1090941
+    },
+    {
+      "filename": "08-podcast-host-e.mp4",
+      "src": "./Videos/08-podcast-host-e.mp4",
+      "bytes": 1098883
+    },
+    {
+      "filename": "10-ugc-hook-night.mp4",
+      "src": "./Videos/10-ugc-hook-night.mp4",
+      "bytes": 1647108
+    },
+    {
+      "filename": "11-ugc-app-demo.mp4",
+      "src": "./Videos/11-ugc-app-demo.mp4",
+      "bytes": 2041002
+    },
+    {
+      "filename": "12-ugc-saas-dropshipping.mp4",
+      "src": "./Videos/12-ugc-saas-dropshipping.mp4",
+      "bytes": 13563196
+    },
+    {
+      "filename": "13-authority-nurse-glp1.mp4",
+      "src": "./Videos/13-authority-nurse-glp1.mp4",
+      "bytes": 10489613
+    },
+    {
+      "filename": "14-ugc-pharmacist-product.mp4",
+      "src": "./Videos/14-ugc-pharmacist-product.mp4",
+      "bytes": 17549819
+    },
+    {
+      "filename": "15-broadcast-news-interview.mp4",
+      "src": "./Videos/15-broadcast-news-interview.mp4",
+      "bytes": 6963944
+    }
+  ]
+}

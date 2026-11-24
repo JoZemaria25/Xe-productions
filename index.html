@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XE PRODUCTIONS — Commercial Cinema, Broadcast Authority &amp; High-Converting UGC</title>
+  <meta name="description"
+    content="XE PRODUCTIONS delivers commercial cinema, broadcast authority, and scroll-stopping UGC at software speed—without six-figure agency retainers or three-month shoot delays." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <!-- SERENE TOP NAVIGATION -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="XE PRODUCTIONS Home">
+        <span class="brand-xe">XE</span>
+        <span class="brand-word">PRODUCTIONS</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary Navigation">
+        <a href="#work" class="nav-link">THE REEL</a>
+        <a href="#book" class="nav-link">STUDIO DESK</a>
+        <a href="#faq" class="nav-link nav-link--hide-xs">QUESTIONS</a>
+        <a href="#book" class="nav-cta" id="headerCta">
+          <span>TELL US WHAT YOU WANT</span>
+          <span class="nav-count" id="headerSelectionCount" hidden>0</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ACT I — THE TICKET (HERO SECTION) -->
+    <section class="hero section-divider" aria-label="XE Productions Flagship Introduction">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <div class="hero-signature">
+            <span class="xe-monogram" aria-hidden="true">XE</span>
+            <div class="xe-signature-meta">
+              <span class="mono-label">XE PRODUCTIONS</span>
+              <span class="mono-sub">COMMERCIAL CINEMA AT SOFTWARE SPEED</span>
+            </div>
+          </div>
+
+          <h1 class="hero-headline">
+            <span>UNFAIR</span>
+            <span class="hero-headline-outline">CREATIVE</span>
+            <span>VELOCITY.</span>
+          </h1>
+
+          <p class="hero-lead">
+            Your competitors are still waiting six weeks for a studio edit. Pick a proven visual format below, tell us
+            what you want your audience to feel, and launch your next campaign in days.
+          </p>
+
+          <p class="hero-sub">
+            Commercial cinema, broadcast authority, and scroll-stopping UGC—built without six-figure agency retainers or
+            three-month shoot delays.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#work" class="btn btn--primary">
+              <span>EXPLORE THE REEL</span>
+              <span aria-hidden="true">↓</span>
+            </a>
+            <a href="#book" class="btn btn--white" id="heroBookCta">
+              <span>TELL US WHAT YOU WANT</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- FEATURED SHOWCASE PLAYER (CONSTRAINED TO MAX-HEIGHT: 64VH) -->
+        <div class="hero-stage">
+          <figure class="hero-player-wrap">
+            <div class="hero-video-shell" id="heroVideoTrigger" role="button" tabindex="0"
+              aria-label="Watch featured commercial film with full sound">
+              <video id="heroVideo" autoplay muted loop playsinline preload="metadata"></video>
+
+              <div class="hero-video-controls">
+                <button type="button" class="video-pill" id="heroSoundBtn" aria-label="Toggle hero preview audio">
+                  SOUND OFF
+                </button>
+                <button type="button" class="video-pill video-pill--white" id="heroTheaterBtn">
+                  WATCH WITH SOUND ↗
+                </button>
+              </div>
+            </div>
+
+            <figcaption class="hero-caption">
+              <div>
+                <span class="mono-label" id="heroCaptionCategory">FEATURED FILM</span>
+                <strong id="heroCaptionTitle">Loading flagship reel…</strong>
+              </div>
+              <span class="mono-duration" id="heroDuration">--:--</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACT II — THE VOYAGE (CURATED VISUAL SHOWCASE) -->
+    <section class="showcase section-divider" id="work" aria-labelledby="showcaseHeading">
+      <div class="container">
+        <div class="showcase-head reveal">
+          <div class="showcase-title-wrap">
+            <span class="mono-label">CURATED VISUAL PROOF</span>
+            <h2 class="section-title" id="showcaseHeading">
+              MARKETING THAT<br />MARKETS ITSELF.
+            </h2>
+          </div>
+          <div class="showcase-intro">
+            <p>
+              Hover any piece to feel the pacing. Watch with sound to hear the voice cadence and energy. When a visual
+              identity matches where your brand is going, carry it straight to our studio desk.
+            </p>
+            <div class="showcase-meta-bar">
+              <span class="mono-sub" id="reelCountStatus">DISCOVERING REEL…</span>
+              <button type="button" class="inline-link" id="jumpToDeskBtn" hidden>
+                CARRIED TO STUDIO DESK (<span id="carriedCount">0</span>) →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CLEAN SINGLE-ROW FILTER BAR -->
+        <div class="filter-bar-container reveal" id="filterBarContainer">
+          <div class="filter-bar" role="tablist" aria-label="Filter XE Productions showcase by category" id="filterBar">
+            <button type="button" class="filter-tab is-active" role="tab" aria-selected="true" data-filter="all">
+              ALL WORK
+            </button>
+            <button type="button" class="filter-tab" role="tab" aria-selected="false" data-filter="brand-films">
+              BRAND FILMS
+            </button>
+            <button type="button" class="filter-tab" role="tab" aria-selected="false" data-filter="broadcast-podcast">
+              BROADCAST &amp; PODCAST
+            </button>
+            <button type="button" class="filter-tab" role="tab" aria-selected="false" data-filter="expert-clinical">
+              EXPERT &amp; CLINICAL
+            </button>
+            <button type="button" class="filter-tab" role="tab" aria-selected="false" data-filter="ugc-app">
+              UGC &amp; APP DEMOS
+            </button>
+            <button type="button" class="filter-tab" role="tab" aria-selected="false" data-filter="product-scenes">
+              PRODUCT SCENES
+            </button>
+          </div>
+        </div>
+
+        <!-- SERENE FLOATING VIDEO GALLERY (DYNAMICALLY POPULATED FROM ./Videos/) -->
+        <div class="reel-grid" id="reelGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ACT III — THE DESTINATION (PRIVATE STUDIO DESK: PROGRESSIVE REVEAL) -->
+    <section class="destination section-divider" id="book" aria-labelledby="destinationHeading">
+      <div class="container">
+        <div class="destination-intro reveal">
+          <span class="mono-label">THE STUDIO DESK</span>
+          <h2 class="section-title" id="destinationHeading">
+            TELL US WHAT YOU WANT<br />YOUR AUDIENCE TO FEEL.
+          </h2>
+          <p class="destination-lead">
+            No bloated agency intake forms. Open the brief below to share the direction that caught your eye and lock a
+            20-minute strategy &amp; production call directly on our calendar.
+          </p>
+        </div>
+
+        <!-- PURE WHITE BREATHING STAGE WITH COLLAPSIBLE BRIEF DRAWER -->
+        <div class="studio-desk reveal" id="studioDesk">
+          <div class="desk-gate">
+            <div class="desk-gate-copy">
+              <span class="mono-label">READY WHEN YOU ARE</span>
+              <h3 class="desk-gate-title">SHAPE YOUR CREATIVE BRIEF &amp; LOCK YOUR CALL</h3>
+              <p class="desk-gate-status" id="deskGateStatus">
+                20-minute strategy &amp; production alignment • 72-hour ad-ready masters
+              </p>
+            </div>
+            <button
+              type="button"
+              class="btn btn--primary desk-toggle-btn"
+              id="deskToggleBtn"
+              aria-expanded="false"
+              aria-controls="studioDeskDrawer"
+            >
+              <span id="deskToggleLabel">SHARE WHAT YOU WANT TO SEE</span>
+              <span id="deskToggleArrow" aria-hidden="true">↓</span>
+            </button>
+          </div>
+
+          <div class="desk-drawer" id="studioDeskDrawer" aria-hidden="true">
+            <div class="desk-drawer-inner">
+              <form class="desk-form" id="bookingForm" novalidate>
+                <div class="desk-columns">
+                  <!-- VISION BRIEF -->
+                  <div class="desk-col desk-col--vision">
+                    <div class="desk-step-head">
+                      <span class="mono-label">YOUR VISION</span>
+                      <h3>SHARE WHAT YOU WANT TO SEE</h3>
+                    </div>
+
+                    <!-- CARRIED REFERENCES FROM SHOWCASE -->
+                    <div class="desk-group">
+                      <div class="desk-label-row">
+                        <span class="field-label">SELECTED VISUAL REFERENCES</span>
+                        <button type="button" class="quiet-btn" id="togglePickerBtn">+ BROWSE REEL REFERENCES</button>
+                      </div>
+
+                      <div class="selected-refs" id="selectedRefs">
+                        <p class="refs-empty">No specific clip selected yet — choose a creative vibe below or click “Use
+                          This Direction” on any video above.</p>
+                      </div>
+
+                      <div class="ref-drawer" id="refDrawer" hidden></div>
+                    </div>
+
+                    <!-- VIBE SELECTOR -->
+                    <div class="desk-group">
+                      <span class="field-label">OR PICK YOUR PRIMARY CREATIVE DIRECTION</span>
+                      <div class="vibe-grid" id="vibeGrid" role="radiogroup" aria-label="Primary Creative Direction">
+                        <label class="vibe-option is-active">
+                          <input type="radio" name="vibe" value="High-Concept Brand Film" checked />
+                          <span>High-Concept Brand Film</span>
+                        </label>
+                        <label class="vibe-option">
+                          <input type="radio" name="vibe" value="Founder Authority / Podcast" />
+                          <span>Founder Authority / Podcast</span>
+                        </label>
+                        <label class="vibe-option">
+                          <input type="radio" name="vibe" value="High-Converting Social UGC" />
+                          <span>High-Converting Social UGC</span>
+                        </label>
+                        <label class="vibe-option">
+                          <input type="radio" name="vibe" value="Product / SaaS Showcase" />
+                          <span>Product / SaaS Showcase</span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- PLAIN ENGLISH VISION INPUTS -->
+                    <div class="desk-group">
+                      <label class="field-label" for="visionInput">WHAT DO YOU WANT TO CREATE &amp; WHAT SHOULD VIEWERS
+                        FEEL? *</label>
+                      <textarea id="visionInput" name="vision" rows="4"
+                        placeholder="e.g. We're launching our new flagship supplement and want two 30-second authority spots that feel like an insider clinical conversation—not a cheesy infomercial."
+                        required></textarea>
+                    </div>
+
+                    <div class="desk-group">
+                      <label class="field-label" for="outcomeInput">WHO IS YOUR CUSTOMER &amp; WHAT OUTCOME DO YOU WANT?
+                        *</label>
+                      <input type="text" id="outcomeInput" name="outcome"
+                        placeholder="e.g. Busy founders &amp; operators — lower Meta CPA and book qualified demos"
+                        required />
+                    </div>
+
+                    <div class="desk-row-2">
+                      <div class="desk-group">
+                        <label class="field-label" for="clientNameInput">YOUR NAME &amp; BRAND *</label>
+                        <input type="text" id="clientNameInput" name="clientName"
+                          placeholder="e.g. Maya Chen — Solis Health" required />
+                      </div>
+                      <div class="desk-group">
+                        <label class="field-label" for="clientContactInput">EMAIL OR WHATSAPP *</label>
+                        <input type="text" id="clientContactInput" name="clientContact"
+                          placeholder="maya@solis.co or +1 555 234 5678" required />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- BOOKING PANEL -->
+                  <div class="desk-col desk-col--booking">
+                    <div class="desk-step-head">
+                      <span class="mono-label">LOCK YOUR CALL</span>
+                      <h3>BOOK YOUR STRATEGY &amp; PRODUCTION CALL</h3>
+                    </div>
+
+                    <p class="booking-note">
+                      20-minute creative alignment call. We map your hook, pacing, and 72-hour production plan live.
+                    </p>
+
+                    <!-- INTERACTIVE DATE PICKER (DYNAMICALLY GENERATED NEXT 5 BUSINESS DAYS) -->
+                    <div class="desk-group">
+                      <div class="desk-label-row">
+                        <span class="field-label">SELECT A DAY</span>
+                        <span class="mono-tz" id="timezoneLabel">LOCAL TIME</span>
+                      </div>
+                      <div class="date-strip" id="dateStrip" role="radiogroup" aria-label="Select meeting date"></div>
+                    </div>
+
+                    <!-- INTERACTIVE TIME SLOT PICKER -->
+                    <div class="desk-group">
+                      <span class="field-label">SELECT A TIME SLOT</span>
+                      <div class="time-grid" id="timeGrid" role="radiogroup" aria-label="Select meeting time">
+                        <button type="button" class="slot-btn" data-time="10:00">10:00 AM</button>
+                        <button type="button" class="slot-btn is-selected" data-time="11:30">11:30 AM</button>
+                        <button type="button" class="slot-btn" data-time="14:00">02:00 PM</button>
+                        <button type="button" class="slot-btn" data-time="16:00">04:00 PM</button>
+                        <button type="button" class="slot-btn" data-time="17:30">05:30 PM</button>
+                      </div>
+                    </div>
+
+                    <!-- LIVE BOOKING SUMMARY -->
+                    <div class="call-summary" id="callSummary">
+                      <div class="summary-line">
+                        <span>DIRECTION</span>
+                        <strong id="liveDirection">High-Concept Brand Film</strong>
+                      </div>
+                      <div class="summary-line">
+                        <span>REFERENCES</span>
+                        <strong id="liveRefs">None selected (using vibe)</strong>
+                      </div>
+                      <div class="summary-line">
+                        <span>CALL SLOT</span>
+                        <strong id="liveSlot">Selecting slot…</strong>
+                      </div>
+                    </div>
+
+                    <p class="form-alert" id="bookingError" role="alert" hidden></p>
+
+                    <button type="submit" class="btn btn--primary btn--full" id="confirmBookingBtn">
+                      <span>CONFIRM PRODUCTION CALL</span>
+                      <span aria-hidden="true">→</span>
+                    </button>
+
+                    <!-- CONFIRMED BOOKING DISPATCH PANEL -->
+                    <div class="booking-confirmed" id="bookingConfirmed" hidden>
+                      <div class="confirmed-head">
+                        <span class="confirmed-mark">✓</span>
+                        <div>
+                          <strong>PRODUCTION BRIEF &amp; CALL RESERVED</strong>
+                          <p id="confirmedMeta">Your slot and creative summary are ready to dispatch.</p>
+                        </div>
+                      </div>
+                      <div class="dispatch-stack">
+                        <button type="button" class="btn btn--primary btn--full" id="downloadIcsBtn">
+                          ADD TO CALENDAR (.ICS) ↓
+                        </button>
+                        <div class="dispatch-row">
+                          <a href="#" class="btn btn--outline-dark" id="sendEmailLink">SEND VIA EMAIL ↗</a>
+                          <a href="#" class="btn btn--outline-dark" id="sendWhatsappLink" target="_blank"
+                            rel="noopener noreferrer">WHATSAPP DESK ↗</a>
+                        </div>
+                        <button type="button" class="quiet-btn quiet-btn--center" id="copySummaryBtn">
+                          COPY FULL BRIEF TO CLIPBOARD
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBJECTION-HANDLING EDITORIAL FAQ (ALL COLLAPSED BY DEFAULT, SMOOTH REVEAL) -->
+    <section class="faq section-divider" id="faq" aria-labelledby="faqHeading">
+      <div class="container faq-layout">
+        <div class="faq-aside reveal">
+          <span class="mono-label">RISK REVERSAL</span>
+          <h2 class="section-title" id="faqHeading">
+            STRAIGHT<br />ANSWERS.
+          </h2>
+          <p>
+            Every objection founders and growth leaders raise before trusting a studio with paid acquisition
+            creative—answered plainly.
+          </p>
+        </div>
+
+        <div class="faq-list reveal" id="faqList">
+          <article class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-1" id="faq-btn-1">
+              <span class="faq-q">Will audiences tell this is AI, or does it hold up in paid acquisition?</span>
+              <span class="faq-symbol" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1" aria-hidden="true">
+              <div class="faq-panel-inner">
+                <p>
+                  It is built to pass the ruthless three-second thumb test on Meta, TikTok, and YouTube. We direct natural
+                  lighting imperfections, micro-expressions, breath-paced voice cadence, and frame-locked lip-sync—never
+                  glossy plastic templates. Open any spoken spot in our reel with sound on and judge it with your own eyes
+                  and ears.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-2" id="faq-btn-2">
+              <span class="faq-q">Can you integrate our exact product packaging, brand palette, and live app UI?</span>
+              <span class="faq-symbol" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" aria-hidden="true">
+              <div class="faq-panel-inner">
+                <p>
+                  Yes. Send us your packaging photos or 3D renders, brand color values, typography, or live mobile/SaaS
+                  screen recordings. We composite your exact product and interface into the scene's lighting, reflections,
+                  and hand motion so every frame belongs unmistakably to your brand.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-3" id="faq-btn-3">
+              <span class="faq-q">What does turnaround look like from our first call to final delivery?</span>
+              <span class="faq-symbol" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" aria-hidden="true">
+              <div class="faq-panel-inner">
+                <p>
+                  Within 24 hours of our 20-minute strategy call, you review and approve the hook and visual treatment.
+                  First ad-ready masters arrive within 72 hours—allowing your growth team to launch and test fresh
+                  creative angles in days instead of waiting six weeks for a traditional production house.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-4" id="faq-btn-4">
+              <span class="faq-q">Do we get full commercial ownership for paid ads across Meta, TikTok, YouTube, and
+                broadcast?</span>
+              <span class="faq-symbol" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4" aria-hidden="true">
+              <div class="faq-panel-inner">
+                <p>
+                  100% perpetual commercial ownership is included on every deliverable. Run your spots indefinitely across
+                  Meta, TikTok, YouTube, landing pages, retail displays, and Connected TV—with zero recurring creator
+                  licensing fees or usage-window renewals.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-5" id="faq-btn-5">
+              <span class="faq-q">What if we know the outcome we want, but don't have a script or creative direction
+                yet?</span>
+              <span class="faq-symbol" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-panel" id="faq-panel-5" role="region" aria-labelledby="faq-btn-5" aria-hidden="true">
+              <div class="faq-panel-inner">
+                <p>
+                  That's how most founders come to us. Tell us what you sell, who you want to persuade, and which clips
+                  above feel closest to your brand's energy. We handle the direct-response hook architecture, scripting,
+                  pacing, and full visual execution end to end.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MINIMAL EDITORIAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-xe">XE</span>
+        <div class="footer-brand-meta">
+          <strong>XE PRODUCTIONS</strong>
+          <span>Commercial Cinema, Broadcast Authority &amp; Native UGC</span>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#work">THE REEL</a>
+        <a href="#book">BOOK A CALL</a>
+        <a href="#faq">QUESTIONS</a>
+        <a href="mailto:hello@xeproductions.co?subject=XE%20PRODUCTIONS%20—%20Production%20Inquiry">HELLO@XEPRODUCTIONS.CO
+          ↗</a>
+      </div>
+    </div>
+
+    <div class="container footer-legal">
+      <span>© <span id="footerYear">2026</span> XE PRODUCTIONS. ALL RIGHTS RESERVED.</span>
+      <span>BUILT FOR HIGH-VELOCITY BRANDS</span>
+    </div>
+  </footer>
+
+  <!-- DISTRACTION-FREE FULL-AUDIO THEATER MODAL -->
+  <div class="theater" id="theaterModal" role="dialog" aria-modal="true" aria-labelledby="theaterTitle" hidden>
+    <div class="theater-backdrop" id="theaterBackdrop"></div>
+    <div class="theater-container">
+      <div class="theater-bar">
+        <span class="mono-label" id="theaterCategory">BRAND FILMS</span>
+        <div class="theater-bar-actions">
+          <button type="button" class="theater-btn" id="theaterPrevBtn" aria-label="Previous video">← PREV</button>
+          <button type="button" class="theater-btn" id="theaterNextBtn" aria-label="Next video">NEXT →</button>
+          <button type="button" class="theater-btn theater-btn--close" id="theaterCloseBtn"
+            aria-label="Close theater">CLOSE ×</button>
+        </div>
+      </div>
+
+      <div class="theater-stage">
+        <div class="theater-video-col">
+          <video id="theaterVideo" controls playsinline></video>
+        </div>
+        <div class="theater-info-col">
+          <div>
+            <span class="mono-sub" id="theaterRuntime">DURATION: --:--</span>
+            <h3 class="theater-title" id="theaterTitle">Loading…</h3>
+            <p class="theater-angle" id="theaterAngle"></p>
+          </div>
+          <div class="theater-cta-group">
+            <button type="button" class="btn btn--primary btn--full" id="theaterUseBtn">
+              USE THIS DIRECTION →
+            </button>
+            <button type="button" class="btn btn--outline-dark btn--full" id="theaterToggleRefBtn">
+              ADD TO STUDIO DESK +
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUIET TOAST -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
